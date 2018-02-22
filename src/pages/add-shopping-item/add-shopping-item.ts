@@ -34,9 +34,9 @@ export class AddShoppingItemPage {
     console.log('ionViewDidLoad AddShoppingItemPage');
   }
 
-  addItem(item: Item) {
-    this.shopping.addItem(item).then(ref=>{
-      console.log(ref.key);
+  addItem(item: Item){
+    this.shopping.addItem(item).then(ref=> {
+      this.navCtrl.setRoot('HomePage', { key: ref.key });
     })
   }
 

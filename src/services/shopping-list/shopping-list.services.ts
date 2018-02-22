@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { AngularFireDatabase } from "angularfire2/database";
-import { Item } from "ionic-angular/components/item/item";
+import { Item } from "./../../models/item/item.model";
 
 
 @Injectable()
