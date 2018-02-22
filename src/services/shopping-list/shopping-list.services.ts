@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { AngularFireDatabase } from "angularfire2/database";
 import { Item } from "./../../models/item/item.model";
+import { Item } from "ionic-angular/components/item/item";
 
 
 @Injectable()
@@ -18,5 +19,9 @@ export class ShoppingListService {
 
     addItem(item: Item){
         return this.shoppingListRef.push(item);
+    }
+
+    editItem(item: Item){
+        return this.shoppingListRef.update(item.key, item);
     }
 }
